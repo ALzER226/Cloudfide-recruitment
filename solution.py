@@ -19,7 +19,7 @@ def add_virtual_column(df: pandas.DataFrame, role: str, new_column: str) -> pand
             and split_role[1] in operations.keys()
             and split_role[2] in df.columns
             and split_role[0] in df.columns):
-        df[new_column] = operations[split_role[1]](df[split_role[0]], split_role[2])
+        df[new_column] = operations[split_role[1]](df[split_role[0]], df[split_role[2]])
         return df
 
     return pandas.DataFrame([])
