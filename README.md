@@ -17,5 +17,12 @@ To achieve this, implement add_virtual_column function.
 - If the role or any column label is incorrect, the function should return an empty DataFrame. 
 
 ### Additional requirements
-- Role input has a form of: "column_name/operator/column_name" and there can be spaces separating and trailing each part of the expression
+- Role input has an exact form of: "column_name/operator/column_name" and there can be spaces separating and trailing each part of the expression
 - Column types in df have valid addition, subtraction and multiplication operators
+
+# Running solution
+The environment was created using uv package manager and tests were run using pytest.
+
+```
+uv run pytest
+```
